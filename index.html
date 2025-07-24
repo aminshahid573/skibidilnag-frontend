@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkibidiLang Playground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <style>
+      /* Custom PrismJS theme overrides to match the Skibidi aesthetic */
+      pre[class*="language-"],
+      :not(pre) > code[class*="language-"],
+      .rce-container {
+        background: #1a1a1a !important;
+      }
+      pre[class*="language-"] {
+         border: 1px solid rgb(55 65 81); /* border-gray-700 */
+      }
+      .token.comment, .token.prolog, .token.doctype, .token.cdata { color: #8292a2; font-style: italic; }
+      .token.punctuation { color: #f8f8f2; }
+      .token.property, .token.tag, .token.constant, .token.symbol, .token.deleted, .token.keyword { color: #ff61e6; } /* skibidi-pink */
+      .token.boolean, .token.number { color: #bd93f9; } /* purple */
+      .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: #A4FFA4; } /* light green */
+      .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable { color: #f8f8f2; }
+      .token.atrule, .token.attr-value, .token.function, .token.class-name { color: #00fff7; } /* skibidi-aqua */
+      .token.regex, .token.important { color: #ffb86c; } /* orange */
+      .token.important, .token.bold { font-weight: bold; }
+      .token.italic { font-style: italic; }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'skibidi-dark': '#0F0F0F',
+              'skibidi-pink': '#FF61E6',
+              'skibidi-aqua': '#00FFF7',
+              'skibidi-light': '#FFFFFF',
+              'skibidi-gray': '#AAAAAA',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              rubik: ['Rubik', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.11.0",
+    "react-simple-code-editor": "https://esm.sh/react-simple-code-editor@0.13.1",
+    "prismjs": "https://esm.sh/prismjs@1.29.0",
+    "prismjs/": "https://esm.sh/prismjs@1.29.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-skibidi-dark">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
